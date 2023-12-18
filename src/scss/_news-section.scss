@@ -205,10 +205,10 @@
 
     @media (hover: hover) {
       &:hover {
-        border-color: #6496e2;
-        color: #6496e2;
+        border-color: var(--primary-color);
+        background-color: var(--white-color);
+        color: var(--primary-color);
       }
-
     }
 
     @media (max-width: $breakpoint768) {

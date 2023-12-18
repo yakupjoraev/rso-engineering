@@ -90,6 +90,56 @@ document.addEventListener('DOMContentLoaded', function () {
   newsSlider();
 });
 
+function projectsSlider() {
+  const container = document.querySelector('.projects');
+
+  if (!container) {
+    return null
+  }
+
+  const swiper = new Swiper('.projects__slider', {
+    slidesPerView: 2,
+    spaceBetween: 20,
+    loop: true,
+    grid: {
+      rows: 2,
+    },
+
+
+    navigation: {
+      nextEl: '.projects-slider__arrow--next',
+      prevEl: '.projects-slider__arrow--prev',
+    },
+
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+
+
+        loop: true,
+        grid: {
+          rows: 2,
+        },
+      },
+      // when window width is >= 992px
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        grid: {
+          rows: 1,
+        },
+      },
+    }
+  })
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  projectsSlider();
+});
+
 function reviewsSlider() {
   const container = document.querySelector('.reviews');
 
