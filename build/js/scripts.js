@@ -90,3 +90,94 @@ function newsSlider() {
 document.addEventListener('DOMContentLoaded', function () {
   newsSlider();
 });
+
+function reviewsSlider() {
+  const container = document.querySelector('.reviews');
+
+  if (!container) {
+    return null
+  }
+
+  const swiper = new Swiper('.reviews__slider', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    grid: {
+      rows: 2,
+    },
+
+
+    navigation: {
+      nextEl: '.reviews-slider__arrow--next',
+      prevEl: '.reviews-slider__arrow--prev',
+    },
+
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+
+
+        loop: true,
+        grid: {
+          rows: 2,
+        },
+      },
+      // when window width is >= 992px
+      992: {
+        slidesPerView: 2,
+        spaceBetween: 32,
+        grid: {
+          rows: 1,
+        },
+      },
+    }
+  })
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  reviewsSlider();
+});
+
+function map() {
+  const container = document.querySelector('.contacts')
+  if (!container) {
+    return null
+  }
+
+  let center = [55.769728, 37.676025];
+
+  function init() {
+
+
+    let map = new ymaps.Map('map', {
+      center: center,
+      zoom: 12
+    });
+
+    let placemark = new ymaps.Placemark(center, {}, {
+      iconLayout: 'default#image',
+      iconImageHref: '../img/pin.svg',
+      // iconImageHref: '/local/templates/main/img/pin.svg',
+      iconImageSize: [42, 42],
+      iconImageOffset: [-14, -64]
+    })
+
+    map.geoObjects.add(placemark);
+
+    map.controls.remove('geolocationControl'); // удаляем геолокацию
+    map.controls.remove('searchControl'); // удаляем поиск
+    map.controls.remove('trafficControl'); // удаляем контроль трафика
+    map.controls.remove('typeSelector'); // удаляем тип
+    map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+    map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+    map.controls.remove('rulerControl'); // удаляем контрол правил
+    // map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+  }
+
+  ymaps.ready(init);
+}
+
+map();

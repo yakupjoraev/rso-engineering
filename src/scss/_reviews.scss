@@ -1,0 +1,222 @@
+.reviews {
+  margin-bottom: 140px;
+
+  @media (max-width: $breakpoint992) {
+    margin-bottom: 80px;
+  }
+
+  // .reviews__inner
+
+  &__inner {}
+
+  // .reviews__title
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  // .reviews__container
+
+  &__container {}
+
+  .reviews-slider__arrows {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 16px;
+    margin-bottom: 30px;
+
+    @media (max-width: $breakpoint768) {
+      column-gap: 8px;
+      margin-bottom: 16px;
+    }
+
+  }
+
+  // .reviews__slider
+
+  &__slider {
+    @media (max-width: $breakpoint992) {
+      padding-bottom: 20px;
+    }
+  }
+
+  // .reviews__slider-wrapper
+
+  &__slider-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+
+    @media (max-width: $breakpoint992) {
+      grid-template-rows: repeat(2, 1fr);
+      row-gap: 10px;
+    }
+  }
+
+  // .reviews__slide
+
+  &__slide {
+    padding: 24px 16px;
+    border-radius: 25px;
+    box-shadow: 0px 2px 2px 0px rgba(27, 49, 111, 0.15);
+    border: 2px solid transparent;
+    background: linear-gradient(#202E4F, #202E4F) padding-box,
+      linear-gradient(152.14deg, rgba(134, 160, 213, 1) 9.96%, rgba(27, 49, 111, 1) 100%) border-box;
+    background-color: var(--bg-color);
+    backdrop-filter: blur(15px);
+
+    @media (max-width: $breakpoint768) {
+      padding: 12px 8px;
+      border-radius: 10px;
+      border: 1.5px solid transparent;
+      box-shadow: 0px 1.038px 2.594px 0px rgba(0, 0, 0, 0.10), 0px 4.669px 4.669px 0px rgba(0, 0, 0, 0.09), 0px 10.375px 6.225px 0px rgba(0, 0, 0, 0.05), 0px 18.156px 7.263px 0px rgba(0, 0, 0, 0.01), 0px 28.012px 7.781px 0px rgba(0, 0, 0, 0.00);
+      backdrop-filter: blur(7.78125px);
+    }
+  }
+
+  // .reviews__slide-quotters
+
+  &__slide-quotters {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 12px;
+
+    @media (max-width: $breakpoint992) {
+      width: 60px;
+      margin-left: auto;
+
+      img {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: $breakpoint768) {
+      width: 48px;
+      margin-bottom: 6px;
+    }
+  }
+
+  // .reviews__slide-content
+
+  &__slide-content {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+
+    @media (max-width: $breakpoint768) {
+      column-gap: 12px;
+    }
+  }
+
+  // .reviews__slide-pic
+
+  &__slide-pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    min-width: 130px;
+    height: 130px;
+    border-radius: 100%;
+
+    border: 2px solid #3162AE;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.10), 0px 9px 9px 0px rgba(0, 0, 0, 0.09), 0px 20px 12px 0px rgba(0, 0, 0, 0.05), 0px 35px 14px 0px rgba(0, 0, 0, 0.01), 0px 54px 15px 0px rgba(0, 0, 0, 0.00);
+    backdrop-filter: blur(15px);
+
+    img {
+      max-width: 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: $breakpoint768) {
+      width: 68px;
+      height: 68px;
+      min-width: 68px;
+    }
+  }
+
+  // .reviews__slide-info
+
+  &__slide-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+
+    @media (max-width: $breakpoint768) {
+      row-gap: 4px;
+    }
+  }
+
+  // .reviews__slide-text
+
+  &__slide-text {
+    font-size: 16px;
+    font-weight: 800;
+
+    @media (max-width: $breakpoint992) {
+      font-size: 14px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 8px;
+    }
+  }
+
+  // .reviews__slide-footer
+
+  &__slide-footer {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 500;
+
+    @media (max-width: $breakpoint992) {
+      font-size: 14px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 8px;
+    }
+  }
+}
+
+.reviews-slider {
+
+  // .reviews-slider__arrows
+
+  &__arrows {}
+
+  // .reviews-slider__arrow
+
+  &__arrow {
+    transition: transform 0.2s linear;
+    cursor: pointer;
+
+    @media (hover: hover) {
+      &:hover {
+        transform: scale(1.1);
+      }
+
+    }
+
+    @media (max-width: $breakpoint768) {
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  // .reviews-slider__arrow--prev
+
+  &__arrow--prev {}
+
+  // .reviews-slider__arrow--next
+
+  &__arrow--next {}
+}
