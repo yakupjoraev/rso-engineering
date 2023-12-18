@@ -141,6 +141,34 @@ document.addEventListener('DOMContentLoaded', function () {
   reviewsSlider();
 });
 
+function newsSectionSlider() {
+  const container = document.querySelector('.news-section');
+
+  if (!container) {
+    return null
+  }
+
+  const swiper = new Swiper('.news-section__slider', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    grid: {
+      rows: 3,
+    },
+
+
+    navigation: {
+      nextEl: '.news-section-slider__arrow--next',
+      prevEl: '.news-section-slider__arrow--prev',
+    },
+
+  })
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  newsSectionSlider();
+});
+
 function map() {
   const container = document.querySelector('.contacts')
   if (!container) {
