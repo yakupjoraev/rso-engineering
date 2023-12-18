@@ -5,6 +5,10 @@
     margin-bottom: 80px;
   }
 
+  @media (max-width: $breakpoint768) {
+    margin-bottom: 30px;
+  }
+
   // .reviews__inner
 
   &__inner {}
