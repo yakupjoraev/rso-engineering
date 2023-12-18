@@ -75,7 +75,9 @@
 
   &__step {
     position: relative;
+    z-index: 2;
     width: 100%;
+    min-height: 142px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -95,6 +97,10 @@
       box-shadow: 0px 1.446px 3.615px 0px rgba(0, 0, 0, 0.10), 0px 6.508px 6.508px 0px rgba(0, 0, 0, 0.09), 0px 14.462px 8.677px 0px rgba(0, 0, 0, 0.05), 0px 25.308px 10.123px 0px rgba(0, 0, 0, 0.01), 0px 39.046px 10.846px 0px rgba(0, 0, 0, 0.00);
       // backdrop-filter: blur(10.846156120300293px);
     }
+
+    @media (max-width: $breakpoint768) {
+      min-height: 66px;
+    }
   }
 
   &__step--reverse {
@@ -111,12 +117,34 @@
   }
 
   &__step-line {
+    width: 100%;
+    margin-bottom: -20px;
+    min-width: 120px;
+
+    picture {
+      display: block;
+      width: 100%;
+    }
+
+    img {
+      max-width: 100%;
+      width: 100%;
+    }
 
     @media (max-width: $breakpoint992) {
-      margin: -20px 0;
+      margin: -20px auto;
       height: 40px;
+      min-width: 0;
+
+      picture {
+        display: block;
+        text-align: center;
+        height: 100%;
+      }
 
       img {
+        width: auto;
+        margin: 0 auto;
         height: 100%;
       }
     }
@@ -147,6 +175,8 @@
   // .work__step-num
 
   &__step-num {
+    position: relative;
+    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -160,7 +190,7 @@
       linear-gradient(152.14deg, rgba(134, 160, 213, 1) 9.96%, rgba(27, 49, 111, 1) 100%) border-box;
     background-color: var(--bg-color);
     backdrop-filter: blur(15px);
-    overflow: hidden;
+    // overflow: hidden;
 
     span {
       text-align: center;
@@ -180,10 +210,30 @@
         1px 1px 0 #848484;
     }
 
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 140px;
+      height: 140px;
+      background-color: #3162AE;
+      filter: blur(50px);
+      z-index: -1;
+      user-select: none;
+      pointer-events: none;
+    }
+
     @media (max-width: $breakpoint992) {
       width: 80px;
       height: 80px;
       min-width: 80px;
+
+      &::before {
+        width: 60px;
+        height: 60px;
+      }
 
       span {
         font-size: 54px;

@@ -815,7 +815,9 @@ h3 {
 
 .work__step {
   position: relative;
+  z-index: 2;
   width: 100%;
+  min-height: 142px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -848,6 +850,22 @@ h3 {
   padding: 12px 60px 12px 14px;
 }
 
+.work__step-line {
+  width: 100%;
+  margin-bottom: -20px;
+  min-width: 120px;
+}
+
+.work__step-line picture {
+  display: block;
+  width: 100%;
+}
+
+.work__step-line img {
+  max-width: 100%;
+  width: 100%;
+}
+
 .work__step-line--mobile {
   display: none;
 }
@@ -860,6 +878,8 @@ h3 {
 }
 
 .work__step-num {
+  position: relative;
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -881,7 +901,6 @@ h3 {
   background-color: var(--bg-color);
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
-  overflow: hidden;
 }
 
 .work__step-num span {
@@ -894,6 +913,27 @@ h3 {
   color: var(--primary-color);
   -webkit-text-stroke: 2px 848484;
   text-shadow: 1px 1px 0 #848484, -1px -1px 0 #848484, 1px -1px 0 #848484, -1px 1px 0 #848484, 1px 1px 0 #848484;
+}
+
+.work__step-num::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 140px;
+  height: 140px;
+  background-color: #3162AE;
+  -webkit-filter: blur(50px);
+          filter: blur(50px);
+  z-index: -1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 
 .work__callback {
@@ -1227,11 +1267,20 @@ h3 {
   }
 
   .work__step-line {
-    margin: -20px 0;
+    margin: -20px auto;
     height: 40px;
+    min-width: 0;
+  }
+
+  .work__step-line picture {
+    display: block;
+    text-align: center;
+    height: 100%;
   }
 
   .work__step-line img {
+    width: auto;
+    margin: 0 auto;
     height: 100%;
   }
 
@@ -1243,6 +1292,11 @@ h3 {
     width: 80px;
     height: 80px;
     min-width: 80px;
+  }
+
+  .work__step-num::before {
+    width: 60px;
+    height: 60px;
   }
 
   .work__step-num span {
@@ -1759,6 +1813,10 @@ h3 {
   .work {
     margin-bottom: 30px;
     padding-top: 60px;
+  }
+
+  .work__step {
+    min-height: 66px;
   }
 
   .work__step-text {
