@@ -186,7 +186,7 @@ function map() {
 
     let placemark = new ymaps.Placemark(center, {}, {
       iconLayout: 'default#image',
-      iconImageHref: '../img/pin.svg',
+      iconImageHref: '/img/pin.svg',
       // iconImageHref: '/local/templates/main/img/pin.svg',
       iconImageSize: [42, 42],
       iconImageOffset: [-14, -64]
