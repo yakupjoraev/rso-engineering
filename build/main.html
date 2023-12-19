@@ -36,14 +36,17 @@
 
           <a class="navbar__btn" href="#">Оставить заявку</a>
         </div>
+
+
         <ul class="menu">
-          <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>О НАС</a></li>
-          <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>УчредителЬ</a></li>
-          <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>партнЁры</a></li>
-          <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>СОТРУДНИЧЕСТВО</a></li>
-          <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>новости</a></li>
-          <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>отзывы </a></li>
-          <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>контакты</a></li>
+          <li class="menu__item"><a href="#about" class="menu__item-link" data-scroll>О НАС</a></li>
+          <li class="menu__item"><a href="#founder" class="menu__item-link" data-scroll>УчредителЬ</a></li>
+          <li class="menu__item"><a href="#partners" class="menu__item-link" data-scroll>партнЁры</a></li>
+          <li class="menu__item"><a href="#geografy" class="menu__item-link" data-scroll>СОТРУДНИЧЕСТВО</a></li>
+          <li class="menu__item"><a href="#news-section" class="menu__item-link" data-scroll>новости</a></li>
+          <li class="menu__item"><a href="#reviews" class="menu__item-link" data-scroll>отзывы </a></li>
+          <li class="menu__item menu__item--last"><a href="#contacts" class="menu__item-link" data-scroll>контакты</a>
+          </li>
           <li class="menu__item menu__item--mob">
             <a class="navbar__link" href="mailto:office@rsoing.ru">
               <img src="./img/footer/mail.svg" alt="mail pic">
@@ -82,7 +85,7 @@
 
         <a class="hero__btn" href="#">Оставить заявку на подбор</a>
       </div>
-      <div class="hero__main">
+      <div class="hero__main" id="about">
         <h2 class="hero__subtitle section-title">
           РСО Инжиниринг
         </h2>
@@ -177,8 +180,8 @@
     </div>
   </div>
 </section>
-    <section class="founder">
-  <div class="container">
+    <section class="founder" id="founder">
+  <div class="container--mini">
     <div class="founder__inner">
       <h3 class="founder__title section-title">
         УЧРЕДИТЕЛЬ
@@ -202,8 +205,8 @@
     </div>
   </div>
 </section>
-    <section class="partners">
-  <div class="container">
+    <section class="partners" id="partners">
+  <div class="container--mini">
     <div class="partners__inner">
       <h3 class="partners__title section-title">
         НАШИ ПАРТНЁРЫ
@@ -249,34 +252,28 @@
     </div>
   </div>
 </section>
-    <section class="geografy">
+    <section class="geografy" id="geografy">
   <div class="container">
     <div class="geografy__inner">
       <h3 class="geografy__title section-title">география проектов</h3>
 
-      <div class="geografy__lists">
-        <ul class="geografy__list">
-          <li class="geografy__item"> Республика Крым </li>
-          <li class="geografy__item">Ростовская область </li>
-          <li class="geografy__item">Нижнегородская область</li>
-          <li class="geografy__item">Ханты-Мансийский АО</li>
-          <li class="geografy__item">Ямало-Ненецкий АО</li>
-          <li class="geografy__item">Тюменская область</li>
-          <li class="geografy__item">Краснодарский край</li>
-          <li class="geografy__item">Приморский край</li>
-        </ul>
-
-        <ul class="geografy__list">
-          <li class="geografy__item">Хабаровский край </li>
-          <li class="geografy__item">Московская область</li>
-          <li class="geografy__item">Воронежская область</li>
-          <li class="geografy__item"> Ленинградская область</li>
-          <li class="geografy__item"> Ульяновская область</li>
-          <li class="geografy__item">Республика Саха (Якутия)</li>
-          <li class="geografy__item">Республика Алтай</li>
-        </ul>
-      </div>
-
+      <ul class="geografy__list">
+        <li class="geografy__item"> Республика Крым </li>
+        <li class="geografy__item">Ростовская область </li>
+        <li class="geografy__item">Нижнегородская область</li>
+        <li class="geografy__item">Ханты-Мансийский АО</li>
+        <li class="geografy__item">Ямало-Ненецкий АО</li>
+        <li class="geografy__item">Тюменская область</li>
+        <li class="geografy__item">Краснодарский край</li>
+        <li class="geografy__item">Приморский край</li>
+        <li class="geografy__item">Хабаровский край </li>
+        <li class="geografy__item">Московская область</li>
+        <li class="geografy__item">Воронежская область</li>
+        <li class="geografy__item"> Ленинградская область</li>
+        <li class="geografy__item"> Ульяновская область</li>
+        <li class="geografy__item">Республика Саха (Якутия)</li>
+        <li class="geografy__item">Республика Алтай</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -838,7 +835,7 @@
     </div>
   </div>
 </section>
-    <section class="news-section">
+    <section class="news-section" id="news-section">
   <div class="container">
     <div class="news-section__inner">
       <div class="news-section__container">
@@ -975,7 +972,7 @@
       </div>
     </div>
 </section>
-    <section class="reviews">
+    <section class="reviews" id="reviews">
   <div class="container">
     <div class="reviews__inner">
 
@@ -1215,7 +1212,7 @@
     </div>
   </div>
 </section>
-    <section class="contacts">
+    <section class="contacts" id="contacts">
   <div class="container">
     <h3 class="contacts__title section-title">
       КОНТАКТЫ

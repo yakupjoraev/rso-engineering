@@ -47,27 +47,27 @@
     }
   }
 
-  // .geografy__lists
 
-  &__lists {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+  // .geografy__list
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 70px;
+    align-content: baseline;
+    width: fit-content;
+    margin: 0 auto;
 
     @media (max-width: $breakpoint768) {
       column-gap: 16px;
     }
   }
 
-  // .geografy__list
-
-  &__list {}
-
   // .geografy__item
 
   &__item {
     position: relative;
+    max-width: 218px;
     padding-left: 14px;
     color: var(--white-color);
     font-size: 16px;

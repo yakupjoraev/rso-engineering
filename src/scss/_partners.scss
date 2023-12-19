@@ -15,7 +15,13 @@
 
   // .partners__title
 
-  &__title {}
+  &__title {
+    margin-left: 0;
+
+    @media (max-width: $breakpoint992) {
+      margin-left: 0;
+    }
+  }
 
   // .partners__list
 
@@ -24,7 +30,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    column-gap: 40px;
+    column-gap: 32px;
     row-gap: 50px;
 
     @media (max-width: $breakpoint768) {
@@ -59,6 +65,14 @@
     img {
       max-width: 100%;
       object-fit: cover;
+    }
+
+    &:nth-child(n + 5) {
+      margin-right: 2px;
+
+      @media (max-width: $breakpoint768) {
+        margin-right: 0;
+      }
     }
 
     @media (max-width: $breakpoint768) {

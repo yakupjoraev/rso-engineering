@@ -6,7 +6,7 @@
   padding: 0 $containerSidePadding + px;
 
   @media (max-width: $breakpoint1450) {
-    max-width: 1200px;
+    // max-width: 1200px;
   }
 
   @media (max-width: $breakpoint992) {
@@ -78,6 +78,11 @@ h3 {
   flex-grow: 1;
 }
 
+.container--mini {
+  max-width: 940px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
 
 // Animations
 
